@@ -48,8 +48,12 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
 ### 📊 GitHub Activity & Stats
 
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=Lesmana24&show_icons=true&theme=dark&hide_border=true&count_private=true" alt="Lesmana's GitHub Stats" />
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lesmana24&layout=compact&theme=dark&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Lesmana24&theme=github-compact" alt="Lesmana's GitHub Activity Graph" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=Lesmana24&theme=dark&hide_border=true" alt="Lesmana's GitHub Streak" width="49%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Lesmana24&theme=2077" alt="Lesmana's Profile Details" width="49%" />
 </p>
 
 ---
