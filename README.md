@@ -57,5 +57,5 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
 ### 📫 Connect with Me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](linkedin.com/lesmana-adhi-kusuma)
-[![Portfolio](https://img.shields.io/badge/Portfolio-121212?style=for-the-badge&logo=firefox&logoColor=white)](https://portofolio-lesmana.netlify.app/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-121212?style=for-the-badge&logo=firefox&logoColor=white)](portofolio-lesmana.netlify.app/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lesmanaadhik@gmail.com)
