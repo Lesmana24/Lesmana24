@@ -53,7 +53,7 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
 
 <p align="center">
   <img src="https://streak-stats.demolab.com/?user=Lesmana24&theme=dark&hide_border=true" alt="Lesmana's GitHub Streak" width="49%" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Lesmana24&theme=2077" alt="Lesmana's Profile Details" width="49%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Lesmana24&theme=onedark&no-frame=true&margin-w=15" alt="Lesmana's Trophies" width="49%" />
 </p>
 
 ---
