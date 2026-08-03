@@ -52,7 +52,7 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Lesmana24&theme=dark&hide_border=true" alt="Lesmana's GitHub Streak" width="80%" />
+  <img src="https://streak-stats.demolab.com/?user=Lesmana24&theme=dark&hide_border=true&timezone=Asia/Jakarta" alt="Lesmana's GitHub Streak" width="80%" />
 </p>
 
 ---
