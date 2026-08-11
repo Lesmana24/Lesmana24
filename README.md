@@ -1,4 +1,4 @@
-# Hi there, I'm Lesmana Adhi Kusuma 👋
+# Hello there, I'm Lesmana Adhi Kusuma 👋
 
 > **Fullstack Developer | Backend Engineer | IoT & Machine Learning**
 
