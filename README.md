@@ -58,6 +58,10 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Lesmana24&theme=dark&hide_border=true&timezone=Asia/Jakarta" alt="Lesmana's GitHub Streak" width="80%" />
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Lesmana24/Lesmana24/output/space-shooter.gif" width="100%" alt="Animated Space Shooter contribution game" />
+</p>
+
 ---
 
 ### 📫 Connect with Me
