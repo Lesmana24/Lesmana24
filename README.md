@@ -11,12 +11,9 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
 
 ### 🛠️ Tech Stack & Tools
 
-**Languages**  
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+<p align="center">
+  <img src="https://www.gitskins.com/api/section/stack?username=lesmana24&theme=aurora" width="100%" alt="Technology stack for Lesmana Adhi Kusuma" />
+</p>
 
 **Frameworks & Web Development**  
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
@@ -55,7 +52,7 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Lesmana24&theme=dark&hide_border=true&timezone=Asia/Jakarta&v=2" alt="Lesmana's GitHub Streak" width="80%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Lesmana24&theme=dark&hide_border=true&timezone=Asia/Jakarta" alt="Lesmana's GitHub Streak" width="80%" />
 </p>
 
 ---
