@@ -37,6 +37,9 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
 ---
 
 ### 🚀 Featured Projects
+<p align="center">
+  <img src="https://www.gitskins.com/api/section/projects?username=Lesmana24&theme=aurora" width="100%" alt="Selected projects by Lesmana Adhi Kusuma" />
+</p>
 
 | Proyek | Deskripsi & Dampak Teknis | Key Tech Stack |
 | :--- | :--- | :--- |
