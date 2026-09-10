@@ -1,0 +1,32 @@
+name: Update GitSkins Assets
+
+on:
+  schedule:
+    # Berjalan otomatis setiap hari pukul 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Memungkinkan trigger manual via tab Actions
+
+permissions:
+  contents: write
+
+jobs:
+  update-svg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Create assets folder
+        run: mkdir -p assets
+
+      - name: Fetch Dynamic SVGs from GitSkins
+        run: |
+          curl -s -H "User-Agent: Mozilla/5.0" "https://www.gitskins.com/api/section/stack?username=Lesmana24&theme=navi" -o assets/stack.svg
+          curl -s -H "User-Agent: Mozilla/5.0" "https://www.gitskins.com/api/section/projects?username=Lesmana24&theme=navi" -o assets/projects.svg
+
+      - name: Commit and Push if Changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/*.svg
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update dynamic gitskins cards" && git push)
