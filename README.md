@@ -5,7 +5,7 @@
 Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend berkinerja tinggi, sistem berbasis Internet of Things (IoT), dan integrasi model Machine Learning ke dalam ekosistem web/mobile. Berpengalaman merancang ekosistem terdistribusi dari *hardware sensor* hingga *cloud monitoring*, serta berfokus pada optimasi performa dan keamanan sistem.
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/wordmark?username=Lesmana24&theme=white&label=Lesmana%20Adhi%20Kusuma" width="100%" alt="Animated 3D wordmark for Lesmana Adhi Kusuma" />
+  <img src="wordmark.svg" width="100%" alt="Animated 3D wordmark for Lesmana Adhi Kusuma" />
 </p>
 
 ---
