@@ -53,7 +53,7 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
 ### 📊 GitHub Activity & Stats
 
 <p align="center">
-  <img src="https://streak-stats-lake.vercel.app/?user=Lesmana24&theme=highcontrast&hide_border=true&v=2&timezone=Asia/Jakarta" alt="Lesmana's GitHub Streak" width="80%" />
+  <img src="assets/streak.svg" alt="Lesmana's GitHub Streak" width="80%" />
 </p>
 
 <p align="center">

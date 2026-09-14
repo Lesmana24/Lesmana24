@@ -19,7 +19,7 @@ jobs:
       - name: Create assets folder
         run: mkdir -p assets
 
-      - name: Fetch Dynamic SVGs from GitSkins
+      - name: Fetch Dynamic SVGs (GitSkins & Streak Stats)
         run: |
           # 1. Fetch stack.svg dengan fallback aman
           curl -sSf --retry 3 --max-time 30 -H "User-Agent: Mozilla/5.0" "https://www.gitskins.com/api/section/stack?username=Lesmana24&theme=navi" -o assets/stack.tmp.svg || true
@@ -39,9 +39,18 @@ jobs:
             rm -f assets/projects.tmp.svg
           fi
 
+          # 3. Fetch streak.svg dengan fallback aman
+          curl -sSf --retry 3 --max-time 30 -H "User-Agent: Mozilla/5.0" "https://streak-stats-lake.vercel.app/?user=Lesmana24&theme=highcontrast&hide_border=true&v=2&timezone=Asia/Jakarta" -o assets/streak.tmp.svg || true
+          if [ -s assets/streak.tmp.svg ] && grep -q "<svg" assets/streak.tmp.svg; then
+            mv assets/streak.tmp.svg assets/streak.svg
+          else
+            echo "Warning: Gagal mengunduh streak.svg yang valid. Mempertahankan file lama."
+            rm -f assets/streak.tmp.svg
+          fi
+
       - name: Commit and Push if Changed
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/*.svg
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update dynamic gitskins cards" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update dynamic profile cards" && git push)
