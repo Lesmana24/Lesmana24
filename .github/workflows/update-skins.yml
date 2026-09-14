@@ -21,8 +21,23 @@ jobs:
 
       - name: Fetch Dynamic SVGs from GitSkins
         run: |
-          curl -s -H "User-Agent: Mozilla/5.0" "https://www.gitskins.com/api/section/stack?username=Lesmana24&theme=navi" -o assets/stack.svg
-          curl -s -H "User-Agent: Mozilla/5.0" "https://www.gitskins.com/api/section/projects?username=Lesmana24&theme=navi" -o assets/projects.svg
+          # 1. Fetch stack.svg dengan fallback aman
+          curl -sSf --retry 3 --max-time 30 -H "User-Agent: Mozilla/5.0" "https://www.gitskins.com/api/section/stack?username=Lesmana24&theme=navi" -o assets/stack.tmp.svg || true
+          if [ -s assets/stack.tmp.svg ] && grep -q "<svg" assets/stack.tmp.svg; then
+            mv assets/stack.tmp.svg assets/stack.svg
+          else
+            echo "Warning: Gagal mengunduh stack.svg yang valid. Mempertahankan file lama."
+            rm -f assets/stack.tmp.svg
+          fi
+
+          # 2. Fetch projects.svg dengan fallback aman
+          curl -sSf --retry 3 --max-time 45 -H "User-Agent: Mozilla/5.0" "https://www.gitskins.com/api/section/projects?username=Lesmana24&theme=navi" -o assets/projects.tmp.svg || true
+          if [ -s assets/projects.tmp.svg ] && grep -q "<svg" assets/projects.tmp.svg; then
+            mv assets/projects.tmp.svg assets/projects.svg
+          else
+            echo "Warning: Gagal mengunduh projects.svg yang valid. Mempertahankan file lama."
+            rm -f assets/projects.tmp.svg
+          fi
 
       - name: Commit and Push if Changed
         run: |
