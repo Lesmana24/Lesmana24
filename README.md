@@ -63,6 +63,7 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
 <p align="center">
   <img src="https://raw.githubusercontent.com/Lesmana24/Lesmana24/output/koi.gif" width="256" alt="Git Koi Animation" />
 </p>
+
 ---
 
 ### 📫 Connect with Me
