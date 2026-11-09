@@ -1,0 +1,22 @@
+name: Generate Koi
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Dijalankan otomatis setiap tengah malam
+  workflow_dispatch:    # Memungkinkan trigger manual dari tab Actions
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+  # [Medium confidence] Berdasarkan struktur standar GitHub Action untuk git-koi
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate Koi GIF
+        uses: yalongwastaken/git-koi@v1.0.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
