@@ -60,6 +60,9 @@ Mahasiswa Teknik Informatika yang berfokus pada pembangunan arsitektur backend b
   <img src="https://raw.githubusercontent.com/Lesmana24/Lesmana24/output/space-shooter.gif" width="100%" alt="Animated Space Shooter contribution game" />
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Lesmana24/Lesmana24/output/koi.gif" width="100%" alt="Git Koi Animation" />
+</p>
 ---
 
 ### 📫 Connect with Me
