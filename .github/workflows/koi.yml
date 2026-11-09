@@ -2,21 +2,50 @@ name: Generate Koi
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Dijalankan otomatis setiap tengah malam
-  workflow_dispatch:    # Memungkinkan trigger manual dari tab Actions
+    - cron: '20 0 * * *' # Dijalankan setiap hari lewat tengah malam UTC
+  workflow_dispatch:    # Trigger manual dari tab Actions
+  push:
+    paths:
+      - .github/workflows/koi.yml
 
 permissions:
   contents: write
 
+concurrency:
+  group: koi
+  cancel-in-progress: true
+
 jobs:
-  build:
-  # [Medium confidence] Berdasarkan struktur standar GitHub Action untuk git-koi
+  koi:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Generate Koi GIF
-        uses: yalongwastaken/git-koi@v1.0.2
+        uses: yalongwastaken/git-koi@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          output-dir: koi
+          body: white
+
+      - name: Publish Koi to output branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code origin refs/heads/output >/dev/null 2>&1; then
+            git fetch origin output
+            git worktree add /tmp/koi-output FETCH_HEAD
+          else
+            git worktree add --detach /tmp/koi-output
+            cd /tmp/koi-output
+            git checkout --orphan output
+            git rm -rf . >/dev/null 2>&1 || true
+            cd -
+          fi
+          cp -f koi/koi.gif /tmp/koi-output/
+          cd /tmp/koi-output
+          git add koi.gif
+          git diff --cached --quiet || git commit -m "koi: draw the day's koi"
+          git push origin HEAD:output
