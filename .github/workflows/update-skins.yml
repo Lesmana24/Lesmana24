@@ -5,6 +5,9 @@ on:
     # Berjalan otomatis setiap 6 jam: 00:00, 06:00, 12:00, dan 18:00 WIB (17:00, 23:00, 05:00, 11:00 UTC)
     - cron: '0 5,11,17,23 * * *'
   workflow_dispatch: # Memungkinkan trigger manual via tab Actions
+  push:
+    paths:
+      - .github/workflows/update-skins.yml
 
 permissions:
   contents: write
@@ -21,18 +24,20 @@ jobs:
 
       - name: Fetch Dynamic SVGs (GitSkins & Streak Stats)
         run: |
-          # 1. Fetch stack.svg dengan fallback aman
+          # 1. Fetch stack.svg dengan fallback aman dan sanitize watermark
           curl -sSf --retry 3 --max-time 30 -H "User-Agent: Mozilla/5.0" "https://www.gitskins.com/api/section/stack?username=Lesmana24&theme=navi" -o assets/stack.tmp.svg || true
           if [ -s assets/stack.tmp.svg ] && grep -q "<svg" assets/stack.tmp.svg; then
+            perl -0777 -i -pe 's/<g aria-label="Pro preview:.*?<\/g><\/svg>/<\/svg>/s' assets/stack.tmp.svg
             mv assets/stack.tmp.svg assets/stack.svg
           else
             echo "Warning: Gagal mengunduh stack.svg yang valid. Mempertahankan file lama."
             rm -f assets/stack.tmp.svg
           fi
 
-          # 2. Fetch projects.svg dengan fallback aman
+          # 2. Fetch projects.svg dengan fallback aman dan sanitize watermark
           curl -sSf --retry 3 --max-time 45 -H "User-Agent: Mozilla/5.0" "https://www.gitskins.com/api/section/projects?username=Lesmana24&theme=navi" -o assets/projects.tmp.svg || true
           if [ -s assets/projects.tmp.svg ] && grep -q "<svg" assets/projects.tmp.svg; then
+            perl -0777 -i -pe 's/<g aria-label="Pro preview:.*?<\/g><\/svg>/<\/svg>/s' assets/projects.tmp.svg
             mv assets/projects.tmp.svg assets/projects.svg
           else
             echo "Warning: Gagal mengunduh projects.svg yang valid. Mempertahankan file lama."
